@@ -1,5 +1,5 @@
 // Very unsafe operations
-package unsafe2
+package github.com/oq-x/unsafe2
 
 import (
 	"unsafe"
