@@ -1,4 +1,4 @@
-package github.com/oq-x/unsafe2
+package unsafe2
 
 import (
 	"reflect"
