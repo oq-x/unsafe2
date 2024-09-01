@@ -48,12 +48,12 @@ func NewAny(t *Type, v uintptr) *any {
 }
 
 type Interface struct {
-	Type  uintptr
+	Type  *Type
 	Value uintptr
 }
 
 func TypeOf(a any) *Type {
-	return (*Type)(unsafe.Pointer(InterfaceData(a).Type))
+	return InterfaceData(a).Type
 }
 
 func ValueOf(a any) unsafe.Pointer {
