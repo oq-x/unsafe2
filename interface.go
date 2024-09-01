@@ -44,7 +44,7 @@ type Type struct {
 }
 
 func NewAny(t *Type, v uintptr) *any {
-	return (*any)(unsafe.Pointer(&Interface{Type: uintptr(unsafe.Pointer(t)), Value: v}))
+	return (*any)(unsafe.Pointer(&Interface{Type: t, Value: v}))
 }
 
 type Interface struct {
