@@ -43,7 +43,7 @@ type Type struct {
 	PtrToThis int32
 }
 
-func NewAny(t *Type, v uintptr) *any {
+func NewAny(t *Type, v unsafe.Pointer) *any {
 	return (*any)(unsafe.Pointer(&Interface{Type: t, Value: v}))
 }
 
