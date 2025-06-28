@@ -52,6 +52,11 @@ type Interface struct {
 	Value unsafe.Pointer
 }
 
+func TypeOf2[T any]() *Type{
+	var t T
+	return TypeOf(t)
+}
+
 func TypeOf(a any) *Type {
 	return InterfaceData(a).Type
 }
