@@ -112,3 +112,39 @@ func Equal(a, b any) bool {
 
 	return typ.Equal(ai, bi)
 }
+
+const (
+	KindInvalid = 0
+
+	KindBool       = 1
+	KindInt        = 2
+	KindInt8       = 3
+	KindInt16      = 4
+	KindInt32      = 5
+	KindInt64      = 6
+	KindUint       = 7
+	KindUint8      = 8
+	KindUint16     = 9
+	KindUint32     = 10
+	KindUint64     = 11
+	KindUintptr    = 12
+	KindFloat32    = 13
+	KindFloat64    = 14
+	KindComplex64  = 15
+	KindComplex128 = 16
+
+	KindArray  = 17
+	KindChan   = 18
+	KindFunc   = 19
+	KindInterface = 20
+	KindMap    = 21
+	KindPtr    = 22
+	KindSlice  = 23
+	KindString = 24
+	KindStruct = 25
+	KindUnsafePointer = 26
+
+	KindDirectIface = 1 << 5 // flag bit: type stored directly in iface.data
+	KindGCProg      = 1 << 6 // flag bit: type has GC program
+	KindMask        = (1 << 5) - 1 // mask to extract base kind
+)
